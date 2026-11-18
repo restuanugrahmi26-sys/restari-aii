@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RESTARI AI - Robot Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand-icon">🤖</div>
+
+            <div>
+                <h1>RESTARI AI</h1>
+                <p>Your Little AI Companion</p>
+            </div>
+        </div>
+
+        <div class="online">
+            <span></span> ONLINE
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ROBOT -->
+        <section class="robot-section">
+
+            <div class="speech-status" id="status">
+                Halo! Aku RESTARI. Yuk ngobrol! ❤️
+            </div>
+
+            <div class="robot" id="robot">
+
+                <div class="antenna">
+                    <div class="antenna-light"></div>
+                </div>
+
+                <div class="head">
+
+                    <div class="ear left-ear"></div>
+                    <div class="ear right-ear"></div>
+
+                    <div class="face">
+
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+
+                        <div class="mouth" id="mouth"></div>
+
+                    </div>
+
+                    <div class="cheek left-cheek"></div>
+                    <div class="cheek right-cheek"></div>
+
+                </div>
+
+                <div class="body">
+
+                    <div class="heart">♥</div>
+
+                    <div class="lights">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="arm left-arm"></div>
+                <div class="arm right-arm"></div>
+
+                <div class="shadow"></div>
+
+            </div>
+
+            <h2>Halo, aku RESTARI! 👋</h2>
+
+            <p class="description">
+                Robot kecil dengan otak AI pintar.
+                Aku siap menemanimu!
+            </p>
+
+            <div class="robot-buttons">
+
+                <button id="voiceButton" class="voice-button">
+                    🎤 Bicara
+                </button>
+
+                <button id="stopButton" class="stop-button">
+                    🔇 Diam
+                </button>
+
+            </div>
+
+            <div class="feature-list">
+                <span>🧠 Smart AI</span>
+                <span>🎤 Voice</span>
+                <span>💬 Chat</span>
+            </div>
+
+        </section>
+
+        <!-- CHAT -->
+        <section class="chat-section">
+
+            <div class="chat-header">
+
+                <div>
+                    <h2>💬 Chat Bersama RESTARI</h2>
+                    <p>Tanyakan apa saja kepadaku!</p>
+                </div>
+
+                <button id="clearButton">
+                    Hapus
+                </button>
+
+            </div>
+
+            <div class="chat-box" id="chatBox">
+
+                <div class="message bot">
+                    <div class="avatar">🤖</div>
+
+                    <div class="bubble">
+                        Hai! Aku RESTARI. Aku siap menjawab
+                        pertanyaanmu. Mau membahas apa hari ini? ❤️
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Tulis pesan untuk RESTARI..."
+                    autocomplete="off"
+                >
+
+                <button id="sendButton">
+                    ➤
+                </button>
+
+            </div>
+
+            <div class="chat-info">
+                RESTARI menggunakan AI untuk menjawab pertanyaanmu.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Made with ❤️ | RESTARI AI Assistant
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

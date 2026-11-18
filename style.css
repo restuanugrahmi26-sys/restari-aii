@@ -1,0 +1,512 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #f7eee1, #e8d5bd);
+    min-height: 100vh;
+    padding: 25px;
+    color: #5c4938;
+}
+
+.container {
+    max-width: 1050px;
+    margin: auto;
+    background: #fffaf3;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 50px #6d543022;
+}
+
+.header {
+    background: #dfc7aa;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    font-size: 38px;
+}
+
+.brand h1 {
+    font-size: 23px;
+}
+
+.brand p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.online {
+    color: #47734a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.online span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #62a96d;
+    border-radius: 50%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 25px;
+    padding: 30px;
+}
+
+.robot-section {
+    text-align: center;
+    padding: 10px;
+}
+
+.speech-status {
+    background: #f0e5d6;
+    border-radius: 20px;
+    padding: 12px;
+    min-height: 42px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.robot {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.antenna {
+    width: 7px;
+    height: 28px;
+    background: #aa9884;
+    position: relative;
+    z-index: 1;
+}
+
+.antenna-light {
+    position: absolute;
+    top: -9px;
+    left: -5px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #f1a6a6;
+    box-shadow: 0 0 12px #f1a6a6;
+}
+
+.head {
+    width: 185px;
+    height: 155px;
+    background: linear-gradient(145deg, white, #e8ded0);
+    border: 5px solid #d7c5af;
+    border-radius: 48%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 25px #7d65432c;
+}
+
+.face {
+    position: absolute;
+    width: 135px;
+    height: 90px;
+    top: 26px;
+    left: 20px;
+    background: #45404d;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.eyes {
+    display: flex;
+    gap: 35px;
+}
+
+.eye {
+    width: 15px;
+    height: 20px;
+    background: #7de9ff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #7de9ff;
+    animation: blink 4s infinite;
+}
+
+.mouth {
+    width: 22px;
+    height: 7px;
+    border-bottom: 3px solid #ffabb8;
+    border-radius: 50%;
+}
+
+.robot.speaking .mouth {
+    width: 17px;
+    height: 16px;
+    background: #ff9ba9;
+    border: none;
+    animation: talk 0.2s infinite alternate;
+}
+
+.cheek {
+    position: absolute;
+    top: 100px;
+    width: 15px;
+    height: 9px;
+    background: #f2a6a6;
+    border-radius: 50%;
+}
+
+.left-cheek {
+    left: 12px;
+}
+
+.right-cheek {
+    right: 12px;
+}
+
+.ear {
+    width: 23px;
+    height: 43px;
+    background: #cbb9a4;
+    border-radius: 15px;
+    position: absolute;
+    top: 55px;
+    z-index: -1;
+}
+
+.left-ear {
+    left: -19px;
+}
+
+.right-ear {
+    right: -19px;
+}
+
+.body {
+    width: 112px;
+    height: 78px;
+    background: linear-gradient(145deg, white, #d9c8b4);
+    border: 4px solid #d3c0aa;
+    border-radius: 35px;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.heart {
+    color: #e98e9b;
+    font-size: 23px;
+}
+
+.lights {
+    display: flex;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.lights span {
+    width: 6px;
+    height: 6px;
+    background: #91cbb9;
+    border-radius: 50%;
+}
+
+.arm {
+    position: absolute;
+    top: 165px;
+    width: 17px;
+    height: 47px;
+    background: #cbb9a4;
+    border-radius: 15px;
+}
+
+.left-arm {
+    left: calc(50% - 76px);
+    transform: rotate(25deg);
+}
+
+.right-arm {
+    right: calc(50% - 76px);
+    transform-origin: top;
+    animation: wave 2s infinite;
+}
+
+.shadow {
+    position: absolute;
+    width: 130px;
+    height: 15px;
+    background: #8b735044;
+    filter: blur(5px);
+    bottom: 0;
+    border-radius: 50%;
+}
+
+.robot-section h2 {
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.description {
+    color: #9b8772;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.robot-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+button:hover {
+    filter: brightness(0.95);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.voice-button {
+    padding: 13px 22px;
+    background: #a9bd9f;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.stop-button {
+    padding: 13px 22px;
+    background: #e8c9bd;
+    color: #77554b;
+    border-radius: 25px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.feature-list span {
+    background: #f0e5d6;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.chat-section {
+    background: #f6eee4;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 510px;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e3d5c5;
+}
+
+.chat-header h2 {
+    font-size: 18px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    color: #998572;
+    margin-top: 5px;
+}
+
+#clearButton {
+    background: #e6d5c3;
+    padding: 9px 13px;
+    border-radius: 10px;
+    color: #725b45;
+}
+
+.chat-box {
+    flex: 1;
+    height: 330px;
+    overflow-y: auto;
+    padding: 18px 0;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    margin-bottom: 16px;
+}
+
+.message.user {
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: #e6d5c3;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.bubble {
+    background: white;
+    padding: 12px 15px;
+    border-radius: 15px 15px 15px 3px;
+    max-width: 82%;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.user .bubble {
+    background: #d9c4aa;
+    border-radius: 15px 15px 3px 15px;
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+    padding: 7px;
+    background: white;
+    border-radius: 30px;
+}
+
+.input-area input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#sendButton {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #a9bd9f;
+    color: white;
+    font-size: 20px;
+}
+
+.chat-info {
+    margin-top: 12px;
+    font-size: 11px;
+    color: #9a8774;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    background: #dfc7aa;
+    font-size: 12px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes blink {
+    0%, 45%, 49%, 100% { transform: scaleY(1); }
+    47% { transform: scaleY(0.1); }
+}
+
+@keyframes talk {
+    from { transform: scaleY(0.5); }
+    to { transform: scaleY(1.5); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-25deg); }
+    50% { transform: rotate(-65deg); }
+}
+
+.robot.listening .head {
+    animation: listen 0.6s infinite alternate;
+}
+
+.robot.listening .face {
+    box-shadow: 0 0 20px #7de9ff;
+}
+
+.robot.listening .antenna-light {
+    animation: glow 0.5s infinite alternate;
+}
+
+@keyframes listen {
+    from { transform: rotate(-3deg); }
+    to { transform: rotate(3deg); }
+}
+
+@keyframes glow {
+    from { opacity: 0.5; }
+    to { opacity: 1; box-shadow: 0 0 20px #f1a6a6; }
+}
+
+@media(max-width: 750px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .header {
+        padding: 17px;
+    }
+
+    .chat-section {
+        min-height: 470px;
+    }
+}
